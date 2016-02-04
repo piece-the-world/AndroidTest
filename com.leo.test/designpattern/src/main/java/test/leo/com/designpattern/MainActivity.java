@@ -3,6 +3,7 @@ package test.leo.com.designpattern;
 import test.leo.com.designpattern.Behavioral.State.StateDemoFragment;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -15,12 +16,19 @@ public class MainActivity extends AppCompatActivity implements
   public static final String TAG = "MainActivity";
   private CatalogAdapter catalogAdapter;
   private ExpandableListView expandableListView;
+  private FragmentManager fragmentManager;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.activity_main);
+    initialize();
+
+  }
+
+  private void initialize() {
+    fragmentManager = getSupportFragmentManager();
     catalogAdapter = new CatalogAdapter(this);
     expandableListView = (ExpandableListView) findViewById(R.id.elv1);
     expandableListView.setAdapter(catalogAdapter);
@@ -47,21 +55,31 @@ public class MainActivity extends AppCompatActivity implements
             Log.d(TAG, "onGroupExpand:" + groupPosition);
           }
         });
-    expandableListView.setOnChildClickListener(this);
-
-  }
-
-  private void initialize() {
-    android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-    FragmentTransaction ft = fragmentManager.beginTransaction();
-    ft.replace(R.id.content_main, new StateDemoFragment());
-    ft.commit();
+    expandableListView.setOnChildClickListener(MainActivity.this);
   }
 
   @Override
   public boolean onChildClick(ExpandableListView parent, View v,
       int groupPosition, int childPosition, long id) {
     Log.d(TAG, "onChildClick:" + groupPosition + "," + childPosition);
+    switch (groupPosition) {
+    case 0:
+      break;
+    case 1:
+
+      break;
+    case 2:
+      switch (childPosition) {
+      case 0:
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        ft.replace(R.id.content_main, new StateDemoFragment());
+        ft.commit();
+        break;
+      }
+      break;
+    case 3:
+      break;
+    }
     return false;
   }
 }
