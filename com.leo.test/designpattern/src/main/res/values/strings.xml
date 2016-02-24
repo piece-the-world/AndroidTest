@@ -3,4 +3,8 @@
     <string name="action_settings">Settings</string>
     <string name="state_pattern">Allow an object alter it behavior when its internal state changes . The Object will appear to change its class .</string>
     <string name="show_traffic_light">show traffic light</string>
+    <string name="decorator_pattern">Attach additional responsibilities to an object dynamically keeping the same interface. Decorators provide a flexible alternative to subclassing for extending functionality.</string>
+    <string name="coffee">coffee</string>
+    <string name="milk">add milk</string>
+    <string name="sprinkle">add sprinkle</string>
 </resources>

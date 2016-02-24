@@ -1,6 +1,7 @@
 package test.leo.com.designpattern;
 
 import test.leo.com.designpattern.Behavioral.State.StateDemoFragment;
+import test.leo.com.designpattern.Structual.Decorator.DecoratorDemoFragment;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -66,13 +67,21 @@ public class MainActivity extends AppCompatActivity implements
     case 0:
       break;
     case 1:
-
+      switch (childPosition) {
+      case 0:
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        ft.add(R.id.content_main, new DecoratorDemoFragment(), "decorator");
+        ft.addToBackStack(null);
+        ft.commit();
+        break;
+      }
       break;
     case 2:
       switch (childPosition) {
       case 0:
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.content_main, new StateDemoFragment());
+        ft.add(R.id.content_main, new StateDemoFragment(), "state");
+        ft.addToBackStack(null);
         ft.commit();
         break;
       }

@@ -53,7 +53,7 @@ public class CatalogAdapter extends BaseExpandableListAdapter {
     patterns[0] = Pattern
         .compile("test.leo.com.designpattern.Creational.([a-zA-Z]+).[a-zA-Z]+DemoFragment");
     patterns[1] = Pattern
-        .compile("test.leo.com.designpattern.Stuctual.([a-zA-Z]+).[a-zA-Z]+DemoFragment");
+        .compile("test.leo.com.designpattern.Structual.([a-zA-Z]+).[a-zA-Z]+DemoFragment");
     patterns[2] = Pattern
         .compile("test.leo.com.designpattern.Behavioral.([a-zA-Z]+).[a-zA-Z]+DemoFragment");
     patterns[3] = Pattern
@@ -168,6 +168,6 @@ public class CatalogAdapter extends BaseExpandableListAdapter {
 
   @Override
   public boolean isChildSelectable(int groupPosition, int childPosition) {
-    return false;
+    return true;
   }
 }
