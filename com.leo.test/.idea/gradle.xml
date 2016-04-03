@@ -10,8 +10,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/WebView" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/designpattern" />
+            <option value="$PROJECT_DIR$/jnidemo" />
+            <option value="$PROJECT_DIR$/multiprocessdemo1" />
+            <option value="$PROJECT_DIR$/multiprocessdemo2" />
+            <option value="$PROJECT_DIR$/multiprocesslibrary" />
           </set>
         </option>
       </GradleProjectSettings>

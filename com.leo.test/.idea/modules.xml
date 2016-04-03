@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/WebView/WebView.iml" filepath="$PROJECT_DIR$/WebView/WebView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.leo.test.iml" filepath="$PROJECT_DIR$/com.leo.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/designpattern/designpattern.iml" filepath="$PROJECT_DIR$/designpattern/designpattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jnidemo/jnidemo.iml" filepath="$PROJECT_DIR$/jnidemo/jnidemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiprocessdemo1/multiprocessdemo1.iml" filepath="$PROJECT_DIR$/multiprocessdemo1/multiprocessdemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiprocessdemo2/multiprocessdemo2.iml" filepath="$PROJECT_DIR$/multiprocessdemo2/multiprocessdemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiprocesslibrary/multiprocesslibrary.iml" filepath="$PROJECT_DIR$/multiprocesslibrary/multiprocesslibrary.iml" />
     </modules>
   </component>
 </project>
