@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     webView = (WebView) findViewById(R.id.wv);
     webView.loadUrl("http://www.baidu.com");
+    webView.setWebViewClient(new WebViewClient());
 
   }
 
