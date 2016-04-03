@@ -1,1 +1,1 @@
-include ':app', ':designpattern', ':multiprocessdemo1', ':multiprocessdemo2', ':multiprocesslibrary', ':WebView', ':jnidemo'
+include ':app', ':designpattern', ':WebView', ':jnidemo'
