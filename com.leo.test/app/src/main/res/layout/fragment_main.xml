@@ -9,9 +9,11 @@
     tools:context="com.leo.test.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <com.leo.test.widget.LoadMoreListView
+        android:id="@+id/lmlv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.leo.test.widget.LoadMoreListView>
 
 </RelativeLayout>
