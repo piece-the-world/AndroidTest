@@ -1,6 +1,7 @@
 package com.leo.test.widget;
 
 import android.content.Context;
+import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -45,6 +46,7 @@ public class FloatingEntry extends ImageView {
     params = new WindowManager.LayoutParams();
     params.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
     params.gravity = Gravity.LEFT | Gravity.TOP;
+    params.format = PixelFormat.TRANSPARENT;
     params.width = WindowManager.LayoutParams.WRAP_CONTENT;
     params.height = WindowManager.LayoutParams.WRAP_CONTENT;
   }

@@ -3,6 +3,7 @@ package com.leo.test.context;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.graphics.PixelFormat;
 import android.view.Gravity;
 import android.view.WindowManager;
 
@@ -36,9 +37,11 @@ public class MyApplication extends Application {
         .getSystemService(Context.WINDOW_SERVICE);
     WindowManager.LayoutParams params = new WindowManager.LayoutParams();
     params.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
-    params.gravity = Gravity.LEFT | Gravity.TOP;
-    params.x = 300;
-    params.y = 600;
+    // params.gravity = Gravity.LEFT | Gravity.TOP;
+    params.gravity = Gravity.RIGHT | Gravity.BOTTOM;
+    params.x = 200;
+    params.y = 200;
+    params.format = PixelFormat.TRANSPARENT;
     params.width = WindowManager.LayoutParams.WRAP_CONTENT;
     params.height = WindowManager.LayoutParams.WRAP_CONTENT;
     windowManager.addView(floatingEntry, params);
