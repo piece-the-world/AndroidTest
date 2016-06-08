@@ -7,4 +7,7 @@
     <string name="coffee">coffee</string>
     <string name="milk">add milk</string>
     <string name="sprinkle">add sprinkle</string>
+    <string name="visitor_pattern">Represent an operation to be performed on elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.</string>
+    <string name="do_visitor">do visitor</string>
+    <string name="print_visitor">print visitor</string>
 </resources>

@@ -1,6 +1,7 @@
 package test.leo.com.designpattern;
 
 import test.leo.com.designpattern.Behavioral.State.StateDemoFragment;
+import test.leo.com.designpattern.Behavioral.Visitor.VisitorDemoFragment;
 import test.leo.com.designpattern.Structual.Decorator.DecoratorDemoFragment;
 
 import android.os.Bundle;
@@ -83,6 +84,12 @@ public class MainActivity extends AppCompatActivity implements
         ft.add(R.id.content_main, new StateDemoFragment(), "state");
         ft.addToBackStack(null);
         ft.commit();
+        break;
+      case 1:
+        FragmentTransaction ft1 = fragmentManager.beginTransaction();
+        ft1.add(R.id.content_main, new VisitorDemoFragment(), "visitor");
+        ft1.addToBackStack(null);
+        ft1.commit();
         break;
       }
       break;
