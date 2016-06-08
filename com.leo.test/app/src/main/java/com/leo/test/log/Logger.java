@@ -18,6 +18,15 @@ public class Logger {
     }
   }
 
+  public static void debug(String tag, String msg, Throwable throwable,
+      Object... args) {
+    if (debugSwitchOn) {
+      message = String.format(msg, args);
+      message += callMethodAndLine();
+      Log.d(tag, message, throwable);
+    }
+  }
+
   private static String callMethodAndLine() {
     String rst = "at ";
     StackTraceElement thisMethodStack = (new Exception()).getStackTrace()[2];

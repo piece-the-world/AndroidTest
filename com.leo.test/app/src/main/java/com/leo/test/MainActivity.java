@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.netease.hearttouch.hthttpdns.HTHttpDNS;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     Fresco.initialize(this);
+    HTHttpDNS.init(this);
     setContentView(R.layout.activity_main);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
