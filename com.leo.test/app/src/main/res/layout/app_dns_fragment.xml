@@ -12,7 +12,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et1"
-            android:hint="@string/hint_host"/>
+            android:text="api.caipiao.163.com"></EditText>
+        <!--android:hint="@string/hint_host"-->
+        <!--/>-->
 
         <Button
             android:layout_width="match_parent"
@@ -31,6 +33,19 @@
             android:layout_height="wrap_content"
             android:text="direct ips"
             android:id="@+id/bt3"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et2"
+            android:text="127.0.0.1"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="modify dns cache dynamicly"
+            android:id="@+id/bt7"/>
 
         <Button
             android:layout_width="match_parent"

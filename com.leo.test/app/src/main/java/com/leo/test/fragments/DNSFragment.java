@@ -1,5 +1,14 @@
 package com.leo.test.fragments;
 
+import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+import com.leo.test.R;
+import com.leo.test.utils.NetUtils;
+import com.netease.hearttouch.hthttpdns.HTHttpDNS;
+
 import android.app.Fragment;
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -11,15 +20,8 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.leo.test.R;
-import com.leo.test.utils.NetUtils;
-import com.netease.hearttouch.hthttpdns.HTHttpDNS;
-
-import java.util.List;
 
 /**
  * Created by taochao on 16/5/26.
@@ -29,6 +31,7 @@ public class DNSFragment extends Fragment implements View.OnClickListener {
   private EditText et;
   private TextView tv;
   private Handler handler;
+  private EditText et2;
 
   class MyHandler extends Handler {
     @Override
@@ -50,7 +53,9 @@ public class DNSFragment extends Fragment implements View.OnClickListener {
     view.findViewById(R.id.bt4).setOnClickListener(this);
     view.findViewById(R.id.bt5).setOnClickListener(this);
     view.findViewById(R.id.bt6).setOnClickListener(this);
+    view.findViewById(R.id.bt7).setOnClickListener(this);
     et = (EditText) view.findViewById(R.id.et1);
+    et2 = (EditText) view.findViewById(R.id.et2);
     tv = (TextView) view.findViewById(R.id.tv1);
     handler = new MyHandler();
     return view;
@@ -122,6 +127,17 @@ public class DNSFragment extends Fragment implements View.OnClickListener {
       break;
     case R.id.bt6:
       tv.setText("");
+      break;
+    case R.id.bt7:
+      ScheduledExecutorService scheduledExecutorService = Executors
+          .newScheduledThreadPool(1);
+      scheduledExecutorService.scheduleAtFixedRate(new Runnable() {
+        @Override
+        public void run() {
+          NetUtils.modifyDnsCache(et.getText().toString(), et2.getText()
+              .toString());
+        }
+      }, 0L, 300, TimeUnit.MILLISECONDS);
       break;
     }
   }
