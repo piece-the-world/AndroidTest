@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,9 +34,22 @@ public class MainActivity extends AppCompatActivity {
     });
 
     webView = (WebView) findViewById(R.id.wv);
-    webView.loadUrl("http://www.baidu.com");
+    if (savedInstanceState != null) {
+      Log.d("test", "webView   restoreState");
+      webView.restoreState(savedInstanceState);
+    } else {
+      Log.d("test", "webView   new");
+      webView.loadUrl("https://mima.163.com/nie/m_index.html");
+    }
     webView.setWebViewClient(new WebViewClient());
 
+  }
+
+  @Override
+  protected void onSaveInstanceState(Bundle outState) {
+    Log.d("test", "webView   saveState");
+    webView.saveState(outState);
+    super.onSaveInstanceState(outState);
   }
 
   @Override
