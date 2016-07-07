@@ -1,14 +1,14 @@
 package com.leo.test.context;
 
+import com.leo.test.R;
+import com.leo.test.widget.FloatingEntry;
+
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.view.Gravity;
 import android.view.WindowManager;
-
-import com.leo.test.R;
-import com.leo.test.widget.FloatingEntry;
 
 /**
  * Created by leo on 16-4-13.
@@ -21,7 +21,7 @@ public class MyApplication extends Application {
   }
 
   void onResume(final Activity activity) {
-    showFloatingEntry(activity);
+    // showFloatingEntry(activity);
   }
 
   void onPause(final Activity activity) {
